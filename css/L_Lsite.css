@@ -20,6 +20,9 @@
 	font-style: normal;
 }
 @import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
+img {
+	object-fit: cover;
+}
 .notosanskr * {
 	font-family: "Noto Sans KR", sans-serif;
 }
