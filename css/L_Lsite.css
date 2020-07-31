@@ -147,16 +147,16 @@ img{
     height: 12px;
     background-color: blue;
     border-radius: 100px;
-    margin:15px 10px;
+    margin:14px 6px;
     display: none;
 }
 
 #main_sticker{
-    z-index: 50;
+    z-index: 8;
     position: fixed;
     width: 240px;
     left:70%;
-    top:20%;
+    margin-top: 150px;
 }
 
 /* body */
@@ -382,12 +382,26 @@ text-align: left;}
         margin-top:40%;
     }
     #main_sticker{
-        top: 20%;
+        top: 5%;
     }
     #Thumbnail_name{
         opacity: 0;
     }
     /* 상세페이지가 아이패드에서 좀 위에뜸. */
+}
+@media (min-width: 767px) and (max-width: 890px) {
+    #popup{
+        width: 100%;
+        padding:35px;
+        margin-top:35%;
+    }
+    #Thumbnail_name{
+        opacity: 0;
+    }
+    #main_sticker{
+        margin-top: 250px;
+        width: 20%;
+    }
 }
 /* mobile */
 @media (min-width: 280px) and (max-width: 480px) {
@@ -492,6 +506,7 @@ text-align: left;}
     /* artist */
     #artists{
         margin: 0;
+        margin-bottom: 10%;
         /* margin-bottom: %; */
     }
     #artist_icon{
