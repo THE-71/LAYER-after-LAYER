@@ -288,6 +288,13 @@ function box(item) {
 		artist_contents.push(`<img id="popup_right" src="${artists[item][3]}" />`);
 		artist_contents.push(`<div id="info-wrapper">`);
 		artist_contents.push(`<div id="popup_info">`);
+		artist_contents.push(`<div id="popup_contact">`);
+		artist_contents.push(
+			`<a href=mailto:${artists[item][5]} id="p_email">` +
+				artists[item][5] +
+				`</a>`
+		); //이메일
+		artist_contents.push(`</div>`);
 		artist_contents.push(`<p>` + artists[item][9] + `</p>`); //상세페이지 이름.
 		artist_contents.push(
 			`<a id="insta" href="${artists[item][7]}"><img src="./img/instagram.svg" alt="instargam link" /></a>`
@@ -299,15 +306,26 @@ function box(item) {
 		}
 		artist_contents.push(`</div>`);
 
-		artist_contents.push(`<div id="popup_contact">`);
-		artist_contents.push(`<p id="p_email">` + artists[item][5] + `</p>`); //이메일
-		artist_contents.push(`</div>`);
 		artist_contents.push(`</div>`);
 
 		artist_contents.push(`</div>`); //**주의** </ div>라고쓰면 주석처리됨.
 	}
 
 	$(".popup_contents").html(artist_contents.join(""));
+	if (window.innerWidth < 481) {
+		document.querySelector("#overlay").style.display = "block";
+	} else {
+		document.querySelector("#overlay").style.display = "flex";
+	}
+	window.addEventListener("resize", () => {
+		if (
+			document.querySelector("#overlay").style.display !== "none" &&
+			window.innerWidth < 481
+		) {
+			document.querySelector("#overlay").style.display = "block";
+		} else if (document.querySelector("#overlay").style.display !== "none")
+			document.querySelector("#overlay").style.display = "flex";
+	});
 }
 $(document).ready(function () {
 	// shuffleRandom(18)
