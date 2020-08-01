@@ -312,20 +312,8 @@ function box(item) {
 	}
 
 	$(".popup_contents").html(artist_contents.join(""));
-	if (window.innerWidth < 481) {
-		document.querySelector("#overlay").style.display = "block";
-	} else {
-		document.querySelector("#overlay").style.display = "flex";
-	}
-	window.addEventListener("resize", () => {
-		if (
-			document.querySelector("#overlay").style.display !== "none" &&
-			window.innerWidth < 481
-		) {
-			document.querySelector("#overlay").style.display = "block";
-		} else if (document.querySelector("#overlay").style.display !== "none")
-			document.querySelector("#overlay").style.display = "flex";
-	});
+
+	document.querySelector("#overlay").style.display = "flex";
 }
 $(document).ready(function () {
 	// shuffleRandom(18)
