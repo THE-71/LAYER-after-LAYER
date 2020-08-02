@@ -292,7 +292,7 @@ img {
 	align-items: center;
 }
 #popup {
-	overflow: hidden;
+	overflow: scroll;
 	border-radius: 0.5em;
 	max-width: 700px;
 	width: 80%;
@@ -318,7 +318,7 @@ img {
 }
 #main-wrapper {
 	width: 30%;
-	margin: 0 8px;
+	padding: 0 8px;
 	flex-grow: 1;
 }
 #popup_main {
@@ -594,14 +594,16 @@ img {
 	}
 	#main-wrapper {
 		order: 2;
-		margin: 8px 8px 0 0;
-		width: 50%;
+		padding: 0 8px 0 0;
+		width: 60%;
 		flex-grow: 2;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
 	}
 	#popup_right {
 		order: 2;
-		margin-top: 8px;
-		width: 31%;
+		width: 30%;
 	}
 	#popup_info {
 		font-size: 17px;

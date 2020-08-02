@@ -341,7 +341,7 @@ $(document).ready(function () {
 		artist_contact.length = 0;
 	});
 
-	$("#close").click(function () {
+	$("#m_close").click(function () {
 		stopDrag(false);
 		$("#main_sticker").css("z-index", "8");
 		$("#overlay").fadeOut(300);
@@ -349,6 +349,7 @@ $(document).ready(function () {
 		artist_info.length = 0;
 		artist_contact.length = 0;
 	});
+	document.querySelector("#popup").onclick = (e) => e.stopPropagation();
 
 	for (let i = 0; i < 19; i++) {
 		$(`#box${i}`).hover(
