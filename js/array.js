@@ -281,11 +281,13 @@ function box(item) {
 	if (item === 0 || item) {
 		artist_contents.push(`<div id="popup_contents">`);
 		artist_contents.push(`<img id="popup_left"  src="${artists[item][0]}" />`);
+		artist_contents.push(`<div id="wrapper">`);
 		artist_contents.push(
 			`<div id="main-wrapper"><img id="popup_main" src="${artists[item][1]}" /><img id="popup_aside"  src="${artists[item][2]}" /></div>`
 		);
 		artist_contents.push(``);
 		artist_contents.push(`<img id="popup_right" src="${artists[item][3]}" />`);
+		artist_contents.push(`</div>`);
 		artist_contents.push(`<div id="info-wrapper">`);
 		artist_contents.push(`<div id="popup_info">`);
 		artist_contents.push(`<div id="popup_contact">`);
