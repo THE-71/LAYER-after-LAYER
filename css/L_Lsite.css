@@ -595,12 +595,12 @@ img {
 	#main-wrapper {
 		order: 2;
 		padding: 0 8px 0 0;
-		width: 57%;
+		width: 60%;
 		flex-grow: 2;
 	}
 	#popup_right {
 		order: 2;
-		width: 34%;
+		width: 30%;
 	}
 	#popup_info {
 		font-size: 17px;
