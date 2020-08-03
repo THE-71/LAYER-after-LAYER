@@ -300,12 +300,22 @@ img {
 	position: relative;
 	background: #fff;
 	margin: 0 auto;
+	-ms-overflow-style: none; /* IE and Edge */
+	scrollbar-width: none; /* Firefox */
+}
+#popup::-webkit-scrollbar {
+	display: none !important; /* Chrome, Safari, Opera*/
 }
 #popup_logo {
+	position: relative;
 	margin: 20px 0;
 }
 #m_close {
-	display: none;
+	object-fit: contain;
+	display: block;
+	position: absolute;
+	top: 8px;
+	right: 0;
 }
 #popup_contents {
 	display: flex;
@@ -587,6 +597,7 @@ img {
 	#popup_logo {
 		display: flex;
 		justify-content: space-between;
+		align-items: center;
 	}
 	#m_a_logo {
 		float: left;
@@ -594,7 +605,7 @@ img {
 	#m_close {
 		display: inline-block;
 		width: 9%;
-		/* float: right; */
+		position: static;
 	}
 
 	#popup_left {
