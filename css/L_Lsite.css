@@ -311,12 +311,17 @@ img {
 	margin: 20px 0;
 }
 #m_close {
-	object-fit: contain;
+	display: none;
+	/* object-fit: contain;
 	display: block;
 	position: absolute;
 	top: 8px;
-	right: 0;
+	right: 0; */
 }
+#m_close:hover {
+	cursor: pointer;
+}
+
 #popup_contents {
 	display: flex;
 	flex-wrap: wrap;
